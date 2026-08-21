@@ -85,6 +85,14 @@ links:
       title: "Réserver une Session Clarté"
       target: "_blank"
 
+  - link:
+      icon: "fa-solid fa-language"
+      text: "For English speakers!"
+      url: "https://www.sittingmonkeyschool.com"
+      alt: "English version of the Sitting Monkey School site"
+      title: "For English speakers!"
+      target: "_blank"
+
 # -----------------------------------------------------------------------------
 # Social media buttons
 # -----------------------------------------------------------------------------
