@@ -63,26 +63,34 @@ links:
 
   - link:
       icon: "fa-solid fa-people-group"
-      text: "La communauté Skool"
+      text: "Cercles de parole gratuits!"
       url: "https://www.skool.com/ecole-du-singe-assis-7222/about"
       alt: "École du Singe Assis Skool community"
-      title: "Rejoindre la communauté"
+      title: "Cercles de parole gratuits!"
       target: "_blank"
 
   - link:
       icon: "fa-solid fa-globe"
-      text: "Le site"
+      text: "Ton audit gratuit"
       url: "https://go.sittingmonkeyschool.com/minimonkey_audit"
       alt: "Site principal École du Singe Assis"
-      title: "Découvrir le site"
+      title: "Ton audit gratuit"
       target: "_blank"
 
   - link:
       icon: "fa-solid fa-calendar-check"
-      text: "Réserver une Session Clarté"
+      text: "Appel découverte"
       url: "https://calendly.com/solalphan/30min"
       alt: "Réserver une Session Clarté"
-      title: "Réserver une Session Clarté"
+      title: "Appel découverte"
+      target: "_blank"
+
+  - link:
+      icon: "fa-solid fa-brain"
+      text: "Mini Monkey Reset - sors de ta tête - 27€"
+      url: "https://go.sittingmonkeyschool.com/mini_monkey_reset"
+      alt: "Mini Monkey Reset"
+      title: "Mini Monkey Reset - sors de ta tête - 27€"
       target: "_blank"
 
   - link:
