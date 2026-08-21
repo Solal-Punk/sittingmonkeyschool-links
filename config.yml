@@ -71,10 +71,10 @@ links:
 
   - link:
       icon: "fa-solid fa-globe"
-      text: "Ton audit gratuit"
+      text: "Mini Monkey Audit - pour savoir ou tu en es - gratuit"
       url: "https://go.sittingmonkeyschool.com/minimonkey_audit"
-      alt: "Site principal École du Singe Assis"
-      title: "Ton audit gratuit"
+      alt: "Mini Monkey Audit gratuit"
+      title: "Mini Monkey Audit - pour savoir ou tu en es - gratuit"
       target: "_blank"
 
   - link:
