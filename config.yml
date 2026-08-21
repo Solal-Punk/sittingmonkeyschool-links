@@ -9,7 +9,7 @@
 # Theme — directory under ./themes/. Built-ins:
 #   default | minimal-mono | editorial-serif | neo-brutalism
 #   glassmorphism | terminal-retro | paper-card | newsprint
-theme: default
+theme: sitting-monkey
 
 # HTML <html lang> attribute
 lang: "fr"
@@ -37,7 +37,7 @@ google_analytics_id:
 # Profile header
 # -----------------------------------------------------------------------------
 title: "École du Singe Assis"
-avatar: "./images/profile.jpeg"
+avatar: "./images/avatar.jpeg"
 name: "@sittingmonkeyschool"
 tagline: >-
     Coaching somatique • Sophrologie • CNV • Impro — bref, de quoi se
