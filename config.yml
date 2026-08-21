@@ -54,14 +54,6 @@ tagline: >-
 # -----------------------------------------------------------------------------
 links:
   - link:
-      icon: "fa-brands fa-instagram"
-      text: "Instagram"
-      url: "https://instagram.com/sittingmonkeyschool"
-      alt: "École du Singe Assis on Instagram"
-      title: "Suis-nous sur Instagram"
-      target: "_blank"
-
-  - link:
       icon: "fa-solid fa-people-group"
       text: "Cercles de parole gratuits!"
       url: "https://www.skool.com/ecole-du-singe-assis-7222/about"
