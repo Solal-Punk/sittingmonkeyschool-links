@@ -336,11 +336,10 @@ a {
   text-align: center;
 }
 
-/* Cycle icon color through the three accent voices instead of every
-   link icon being the same gold — small touch, but it's the difference
-   between "one accent color" and "a palette". */
-.link-button:nth-of-type(3n+2) i { color: var(--accent-sage); }
-.link-button:nth-of-type(3n+3) i { color: var(--accent-neutral); }
+/* Strict gold/teal alternation instead of every link icon being the
+   same gold — small touch, but it's the difference between "one accent
+   color" and "a palette". */
+.link-button:nth-of-type(even) i { color: var(--accent-sage); }
 
 .link-button:hover {
   background-color: var(--card-bg-hover);
