@@ -29,10 +29,15 @@
   --text-secondary: rgba(246, 241, 228, 0.82);
   --text-muted: rgba(246, 241, 228, 0.62);
 
-  --card-bg: rgba(17, 41, 28, 0.55);
-  --card-bg-hover: rgba(23, 53, 36, 0.68);
+  --card-bg: rgba(17, 41, 28, 0.72);
+  --card-bg-hover: rgba(23, 53, 36, 0.82);
   --card-border: rgba(127, 168, 150, 0.35);
   --card-border-hover: var(--gold);
+  /* Dims whatever patch of the photo lands behind a link/icon card before
+     the translucent tint is applied — the fixed backdrop can land on a
+     lighter part of the photo (e.g. the corduroy pants) depending on page
+     height, and without this the card reads gray instead of forest. */
+  --card-blur: blur(10px) brightness(0.55);
 
   --name-color: var(--gold-bright);
   --icon-color: var(--cream);
@@ -42,6 +47,14 @@
   --avatar-glow: rgba(230, 195, 104, 0.35);
   --badge-bg: var(--gold);
   --badge-fg: var(--forest-deep);
+
+  /* Three accent voices pulled from the same three brand hues, used to add
+     rhythm across the page (tagline pills, link icons) instead of leaning
+     on gold for every accent. Each has its own light-mode translation
+     below so contrast holds on both surfaces. */
+  --accent-gold: var(--gold-bright);
+  --accent-sage: var(--sage-soft);
+  --accent-neutral: var(--cream);
 
   --language-switcher-bg: rgba(17, 41, 28, 0.9);
   --language-switcher-fg: var(--cream);
@@ -69,6 +82,7 @@
     --card-bg-hover: rgba(250, 246, 236, 0.94);
     --card-border: rgba(28, 63, 43, 0.28);
     --card-border-hover: var(--forest);
+    --card-blur: blur(10px);
 
     --name-color: var(--forest);
     --icon-color: var(--forest);
@@ -76,6 +90,10 @@
     --focus-ring: var(--forest);
     --badge-bg: var(--forest);
     --badge-fg: var(--cream);
+
+    --accent-gold: #8a6415;
+    --accent-sage: #2f5b48;
+    --accent-neutral: var(--forest);
 
     --language-switcher-bg: rgba(246, 241, 228, 0.92);
     --language-switcher-fg: var(--ink);
@@ -95,12 +113,16 @@
   --card-bg-hover: rgba(250, 246, 236, 0.94);
   --card-border: rgba(28, 63, 43, 0.28);
   --card-border-hover: var(--forest);
+  --card-blur: blur(10px);
   --name-color: var(--forest);
   --icon-color: var(--forest);
   --icon-hover: #96721f;
   --focus-ring: var(--forest);
   --badge-bg: var(--forest);
   --badge-fg: var(--cream);
+  --accent-gold: #8a6415;
+  --accent-sage: #2f5b48;
+  --accent-neutral: var(--forest);
   --language-switcher-bg: rgba(246, 241, 228, 0.92);
   --language-switcher-fg: var(--ink);
   --language-switcher-hover: rgba(255, 255, 255, 0.95);
@@ -116,16 +138,20 @@
   --text-primary: var(--cream);
   --text-secondary: rgba(246, 241, 228, 0.82);
   --text-muted: rgba(246, 241, 228, 0.62);
-  --card-bg: rgba(17, 41, 28, 0.55);
-  --card-bg-hover: rgba(23, 53, 36, 0.68);
+  --card-bg: rgba(17, 41, 28, 0.72);
+  --card-bg-hover: rgba(23, 53, 36, 0.82);
   --card-border: rgba(127, 168, 150, 0.35);
   --card-border-hover: var(--gold);
+  --card-blur: blur(10px) brightness(0.55);
   --name-color: var(--gold-bright);
   --icon-color: var(--cream);
   --icon-hover: var(--gold-bright);
   --focus-ring: var(--gold-bright);
   --badge-bg: var(--gold);
   --badge-fg: var(--forest-deep);
+  --accent-gold: var(--gold-bright);
+  --accent-sage: var(--sage-soft);
+  --accent-neutral: var(--cream);
 }
 
 * {
@@ -183,12 +209,21 @@ a {
 
 .profile {
   margin-bottom: 8px;
+  position: relative;
 }
 
+/* Avatar sits above everything, half-overlapping the profile card below
+   it — the ring is a conic gradient through all three brand hues rather
+   than a flat gold border, so the very first thing you see already reads
+   as "more than one color". */
 .profile-pic-wrap {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
-  margin-bottom: 18px;
+  padding: 4px;
+  margin-bottom: -44px;
   border-radius: 50%;
+  background: conic-gradient(from 210deg, var(--gold-bright), var(--sage), var(--forest), var(--gold), var(--gold-bright));
   box-shadow: 0 0 0 8px var(--avatar-glow);
 }
 
@@ -198,8 +233,23 @@ a {
   max-width: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--avatar-ring);
+  border: 3px solid var(--bg-solid);
   display: block;
+}
+
+/* Dedicated readable surface behind the name + tagline — the photo
+   underneath has a lot of local contrast (stripes, a bright hand) right
+   where this text sits, so it needs its own backdrop rather than relying
+   on the page-wide scrim alone. */
+.profile-card {
+  position: relative;
+  z-index: 1;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 26px;
+  padding: 56px 22px 28px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .name {
@@ -208,18 +258,46 @@ a {
   font-size: clamp(1.7rem, 6vw, 2.5rem);
   font-weight: 400;
   color: var(--name-color);
-  margin: 10px 0 12px;
+  margin: 0 0 14px;
   letter-spacing: 0.01em;
 }
 
 .description {
   font-family: 'DM Sans', sans-serif;
   font-size: clamp(0.95rem, 3vw, 1.05rem);
-  margin: 0 auto 32px;
-  line-height: 1.65;
+  margin: 0 auto;
+  line-height: 1.7;
   color: var(--text-secondary);
   max-width: 42ch;
   text-wrap: pretty;
+}
+
+/* Tagline pillars ("Coaching somatique", "Sophrologie", "CNV", "Impro")
+   as small colored chips instead of flat text — cycles through the three
+   brand hues so the palette reads as a set, not just "gold + green". */
+.pill {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.86em;
+  padding: 3px 11px;
+  border-radius: 999px;
+  line-height: 1.6;
+  margin: 2px 1px;
+}
+.pill-gold {
+  color: var(--accent-gold);
+  background: color-mix(in srgb, var(--accent-gold) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-gold) 42%, transparent);
+}
+.pill-sage {
+  color: var(--accent-sage);
+  background: color-mix(in srgb, var(--accent-sage) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-sage) 45%, transparent);
+}
+.pill-cream {
+  color: var(--accent-neutral);
+  background: color-mix(in srgb, var(--accent-neutral) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-neutral) 38%, transparent);
 }
 
 .links {
@@ -241,17 +319,23 @@ a {
   border-radius: 14px;
   font-size: 1rem;
   font-weight: 500;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
 }
 
 .link-button i {
-  color: var(--gold);
+  color: var(--accent-gold);
   font-size: 1.1rem;
   flex: 0 0 auto;
   width: 1.3em;
   text-align: center;
 }
+
+/* Cycle icon color through the three accent voices instead of every
+   link icon being the same gold — small touch, but it's the difference
+   between "one accent color" and "a palette". */
+.link-button:nth-of-type(3n+2) i { color: var(--accent-sage); }
+.link-button:nth-of-type(3n+3) i { color: var(--accent-neutral); }
 
 .link-button:hover {
   background-color: var(--card-bg-hover);
@@ -300,8 +384,8 @@ a {
   background: var(--card-bg);
   color: var(--icon-color);
   border-radius: 50%;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
 }
 
 .icon-button i {
@@ -406,8 +490,8 @@ a {
 /* Small phones (iPhone SE and similar) — tighten vertical rhythm */
 @media (max-width: 380px) {
   body { padding-top: 24px; padding-bottom: 24px; }
-  .profile-pic-wrap { margin-bottom: 14px; }
-  .description { margin-bottom: 24px; }
+  .profile-pic-wrap { margin-bottom: -38px; }
+  .profile-card { padding: 50px 16px 22px; }
   .link-button { padding: 14px 16px; }
 }
 

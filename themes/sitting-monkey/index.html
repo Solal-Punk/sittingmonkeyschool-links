@@ -19,8 +19,8 @@
   <meta property="og:title" content="{{ title }}" />
   <meta name="author" content="{{ name }}" />
   <meta property="og:locale" content="{{ og_locale | default: 'en_US' }}" />
-  <meta name="description" content="{{ tagline }}" />
-  <meta property="og:description" content="{{ tagline }}" />
+  <meta name="description" content="{{ tagline | strip_html | strip }}" />
+  <meta property="og:description" content="{{ tagline | strip_html | strip }}" />
   <meta property="og:site_name" content="{{ title }}" />
   <meta property="og:image" content="{{ avatar }}" />
   <meta property="og:type" content="article" />
@@ -66,8 +66,10 @@
       <div class="profile-pic-wrap">
         <img src="{{ avatar }}" alt="{{ ui.profile_picture | default: 'Profile Picture' }}" class="profile-pic" />
       </div>
-      <h1 class="name">{{ name }}</h1>
-      <p class="description">{{ tagline }}</p>
+      <div class="profile-card">
+        <h1 class="name">{{ name }}</h1>
+        <p class="description">{{ tagline }}</p>
+      </div>
     </div>
 
     <div class="links" aria-label="{{ ui.primary_links | default: 'Primary links' }}">

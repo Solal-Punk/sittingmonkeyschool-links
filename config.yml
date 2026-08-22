@@ -37,11 +37,15 @@ google_analytics_id:
 # Profile header
 # -----------------------------------------------------------------------------
 title: "École du Singe Assis"
-avatar: "./images/avatar.jpeg"
-name: "@sittingmonkeyschool"
+avatar: "./images/avatar.png"
+name: "Solal Phan Mazet"
 tagline: >-
-    Coaching somatique • Sophrologie • CNV • Impro — bref, de quoi se
-    reconnecter à son corps (et à son enfant intérieur, on y arrive). 🐒
+    <span class="pill pill-gold">Coaching somatique</span>
+    <span class="pill pill-sage">Sophrologie</span>
+    <span class="pill pill-cream">CNV</span>
+    <span class="pill pill-gold">Impro</span>
+    <br>
+    tout ce qu'il te faut pour te reconnecter à ton corps (et à ton enfant intérieur, on y arrive). 🐒
 
 # -----------------------------------------------------------------------------
 # Links
