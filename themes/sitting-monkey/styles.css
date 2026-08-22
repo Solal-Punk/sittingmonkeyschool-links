@@ -20,6 +20,11 @@
   --gold-bright: #e6c368;
   --cream: #f6f1e4;
   --ink: #12241a;
+  /* A punchier, more saturated teal for accents (link icons, tagline
+     pills) — --sage-soft is too pale next to cream on dark cards and
+     reads as "another off-white" instead of teal. */
+  --teal-bright: #45c2ac;
+  --teal-deep: #146b5c;
 
   --bg-solid: var(--forest-deep);
   --scrim-top: rgba(9, 20, 14, 0.28);
@@ -53,7 +58,7 @@
      on gold for every accent. Each has its own light-mode translation
      below so contrast holds on both surfaces. */
   --accent-gold: var(--gold-bright);
-  --accent-sage: var(--sage-soft);
+  --accent-sage: var(--teal-bright);
   --accent-neutral: var(--cream);
 
   --language-switcher-bg: rgba(17, 41, 28, 0.9);
@@ -92,7 +97,7 @@
     --badge-fg: var(--cream);
 
     --accent-gold: #8a6415;
-    --accent-sage: #2f5b48;
+    --accent-sage: var(--teal-deep);
     --accent-neutral: var(--forest);
 
     --language-switcher-bg: rgba(246, 241, 228, 0.92);
@@ -121,7 +126,7 @@
   --badge-bg: var(--forest);
   --badge-fg: var(--cream);
   --accent-gold: #8a6415;
-  --accent-sage: #2f5b48;
+  --accent-sage: var(--teal-deep);
   --accent-neutral: var(--forest);
   --language-switcher-bg: rgba(246, 241, 228, 0.92);
   --language-switcher-fg: var(--ink);
@@ -150,7 +155,7 @@
   --badge-bg: var(--gold);
   --badge-fg: var(--forest-deep);
   --accent-gold: var(--gold-bright);
-  --accent-sage: var(--sage-soft);
+  --accent-sage: var(--teal-bright);
   --accent-neutral: var(--cream);
 }
 
