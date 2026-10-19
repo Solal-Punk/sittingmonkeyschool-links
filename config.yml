@@ -82,6 +82,14 @@ links:
       target: "_blank"
 
   - link:
+      icon: "fa-solid fa-heart-circle-check"
+      text: "Liste des émotions et des besoins"
+      url: "https://drive.proton.me/urls/1B1MA2Q76M#BZnuH631X5VD"
+      alt: "Liste des émotions et des besoins"
+      title: "Liste des émotions et des besoins"
+      target: "_blank"
+
+  - link:
       icon: "fa-solid fa-brain"
       text: "Mini Monkey Reset - sors de ta tête - 27€"
       url: "https://go.sittingmonkeyschool.com/mini_monkey_reset"
