@@ -76,8 +76,8 @@ links:
   - link:
       icon: "fa-solid fa-calendar-check"
       text: "Appel découverte"
-      url: "https://calendly.com/solalphan/30min"
-      alt: "Réserver une Session Clarté"
+      url: "https://cal.com/sittingmonkeyscheduling/decouverte"
+      alt: "Réserver un appel découverte"
       title: "Appel découverte"
       target: "_blank"
 
