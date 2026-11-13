@@ -66,6 +66,14 @@ links:
       target: "_blank"
 
   - link:
+      icon: "fa-solid fa-puzzle-piece"
+      text: "Les 4 pas de la CNV - mets ta situation en mots - jeu gratuit"
+      url: "https://go.sittingmonkeyschool.com/4-pas"
+      alt: "Jeu gratuit Les 4 pas de la CNV"
+      title: "Les 4 pas de la CNV - jeu gratuit"
+      target: "_blank"
+
+  - link:
       icon: "fa-solid fa-globe"
       text: "Mini Monkey Audit - pour savoir ou tu en es - gratuit"
       url: "https://go.sittingmonkeyschool.com/minimonkey_audit"
