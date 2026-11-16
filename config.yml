@@ -107,7 +107,7 @@ sections:
         cta: "Je rejoins la communauté"
         url: "https://www.skool.com/ecole-du-singe-assis-7222/about"
         image: "./images/magnets/cercles.jpg"
-        alt: "Des personnes en mouvement sur une scène de théâtre"
+        alt: "Des personnes assises en cercle sous une tente"
 
       - title: "La liste des émotions et des besoins"
         meta: "Fiche à télécharger"
@@ -130,7 +130,7 @@ sections:
         cta: "Je réserve mon appel"
         url: "https://cal.com/sittingmonkeyscheduling/decouverte"
         image: "./images/magnets/appel.jpg"
-        alt: "Solal, souriant·e"
+        alt: "Solal en clown, un pot de yaourt à l'oreille comme téléphone"
 
       - title: "Mini Monkey Reset"
         meta: "Programme en ligne · accès immédiat"
@@ -162,7 +162,7 @@ sections:
         cta: "Visit the website"
         url: "https://www.sittingmonkeyschool.com"
         image: "./images/magnets/english.jpg"
-        alt: "Solal, assis·e dans une pièce lumineuse, le regard levé"
+        alt: "Un dragonnier sous le soleil, photographié par Solal"
 
 # -----------------------------------------------------------------------------
 # Social media buttons
