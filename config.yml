@@ -155,6 +155,16 @@ sections:
   - title: "In English"
     sub: "Sessions and resources for English speakers."
     cards:
+      - title: "Free Discovery Call"
+        meta: "Video call · 30 min"
+        badge: "Free"
+        hook: "Let's get to know each other."
+        text: "30 minutes to tell me where you are right now and what's holding you back. We'll see together if and how I can support you, in English."
+        cta: "Book my call"
+        url: "https://cal.com/sittingmonkeyscheduling/discovery"
+        image: "./images/magnets/discovery-en.jpg"
+        alt: "Solal, smiling"
+
       - title: "School of the Sitting Monkey"
         meta: "Website · online sessions"
         hook: "For English speakers!"
