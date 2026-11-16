@@ -48,6 +48,50 @@ tagline: >-
     tout ce qu'il te faut pour te reconnecter à ton corps (et à ton enfant intérieur, on y arrive). 🐒
 
 # -----------------------------------------------------------------------------
+# Lead magnets : grandes cartes « Offert » en haut de la page
+#   image : fichier dans themes/sitting-monkey/images/magnets/
+# -----------------------------------------------------------------------------
+magnets_title: "Commence ici"
+magnets_sub: "4 outils pour revenir dans ton corps. Offerts."
+links_title: "Pour aller plus loin"
+magnets:
+  - title: "L'avis d'expulsion"
+    meta: "Outil interactif · 5 min"
+    hook: "Une règle squatte ta tête ?"
+    text: "« Je dois être productif·ve », « je ne dois pas déranger »… Tu la nommes, tu la remercies, tu la dis à voix haute de 5 façons, et tu la mets dehors. Tu repars avec ton avis d'expulsion, signé et daté."
+    cta: "Je la mets dehors"
+    url: "https://go.sittingmonkeyschool.com/expulsion"
+    image: "./images/magnets/expulsion.jpg"
+    alt: "Un singe à l'air rebelle"
+
+  - title: "Les 4 pas de la CNV"
+    meta: "Jeu · 3 min"
+    hook: "Un conflit te trotte dans la tête ?"
+    text: "Tu démêles ce qui s'est passé de ce que tu te racontes, tu trouves les mots justes pour ce que tu ressens, et tu repars avec une phrase claire, prête à être dite."
+    cta: "Je joue"
+    url: "https://go.sittingmonkeyschool.com/4-pas"
+    image: "./images/magnets/4-pas.jpg"
+    alt: "Un singe assis, l'air contrarié"
+
+  - title: "Ton geste signal"
+    meta: "Audio guidé · 10 min"
+    hook: "Ton bouton calme, au bout des doigts."
+    text: "Tu relies un petit geste discret à un souvenir doux. Avant une réunion, un appel ou un moment qui te stresse, tu refais le geste, et ton corps retrouve la sensation."
+    cta: "J'écoute"
+    url: "https://go.sittingmonkeyschool.com/gestesignal"
+    image: "./images/magnets/geste-signal.jpg"
+    alt: "Un singe, les yeux fermés, apaisé"
+
+  - title: "Mini Monkey Audit"
+    meta: "Quiz · 13 questions · 3 min"
+    hook: "Où en est ton enfant intérieur ?"
+    text: "13 questions pour découvrir ton profil Mini Monkey et voir à quel point tu es connecté·e à ton enfant intérieur. Résultat immédiat."
+    cta: "Je découvre mon profil"
+    url: "https://go.sittingmonkeyschool.com/minimonkey_audit"
+    image: "./images/magnets/audit.jpg"
+    alt: "Un jeune singe curieux"
+
+# -----------------------------------------------------------------------------
 # Links
 #   icon  — Font Awesome class (https://fontawesome.com/search?o=r&m=free)
 #   text  — displayed text (Liquid + HTML allowed)
@@ -63,22 +107,6 @@ links:
       url: "https://www.skool.com/ecole-du-singe-assis-7222/about"
       alt: "École du Singe Assis Skool community"
       title: "Cercles de parole gratuits!"
-      target: "_blank"
-
-  - link:
-      icon: "fa-solid fa-puzzle-piece"
-      text: "Les 4 pas de la CNV - mets ta situation en mots - jeu gratuit"
-      url: "https://go.sittingmonkeyschool.com/4-pas"
-      alt: "Jeu gratuit Les 4 pas de la CNV"
-      title: "Les 4 pas de la CNV - jeu gratuit"
-      target: "_blank"
-
-  - link:
-      icon: "fa-solid fa-globe"
-      text: "Mini Monkey Audit - pour savoir ou tu en es - gratuit"
-      url: "https://go.sittingmonkeyschool.com/minimonkey_audit"
-      alt: "Mini Monkey Audit gratuit"
-      title: "Mini Monkey Audit - pour savoir ou tu en es - gratuit"
       target: "_blank"
 
   - link:

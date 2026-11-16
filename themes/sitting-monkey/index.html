@@ -72,6 +72,31 @@
       </div>
     </div>
 
+    {% if magnets %}
+    <section class="magnets" aria-labelledby="magnets-title">
+      <div class="section-head">
+        <h2 class="section-title" id="magnets-title">{{ magnets_title }}</h2>
+        {% if magnets_sub %}<p class="section-sub">{{ magnets_sub }}</p>{% endif %}
+      </div>
+      {% for magnet in magnets %}
+        <a href="{{ magnet.url }}" target="_blank" rel="noopener" class="magnet">
+          <span class="magnet-img"><img src="{{ magnet.image }}" alt="{{ magnet.alt }}" loading="lazy" width="480" height="600"></span>
+          <span class="magnet-body">
+            <span class="magnet-top">
+              <span class="magnet-meta">{{ magnet.meta }}</span>
+              <span class="magnet-badge">Offert</span>
+            </span>
+            <span class="magnet-title">{{ magnet.title }}</span>
+            <span class="magnet-hook">{{ magnet.hook }}</span>
+            <span class="magnet-text">{{ magnet.text }}</span>
+            <span class="magnet-cta">{{ magnet.cta }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </span>
+        </a>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if links_title %}<div class="section-head"><h2 class="section-title">{{ links_title }}</h2></div>{% endif %}
     <div class="links" aria-label="{{ ui.primary_links | default: 'Primary links' }}">
       {% for item in links %}
         {% assign link = item.link %}

@@ -484,6 +484,79 @@ a {
   outline-offset: 2px;
 }
 
+/* =============================================================================
+   Lead magnets : grandes cartes, photo à gauche, badge « Offert » à droite
+   ============================================================================= */
+.section-head { margin: 30px 0 12px; text-align: left; }
+.section-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 1.1;
+  color: var(--name-color);
+}
+.section-sub { margin-top: 4px; font-size: 0.95rem; color: var(--text-secondary); }
+.section-title, .section-sub { text-shadow: 0 1px 10px rgb(0 0 0 / 75%), 0 0 2px rgb(0 0 0 / 60%); }
+.section-sub { font-weight: 500; color: var(--text-primary); }
+@media (prefers-color-scheme: light) {
+  :root:not(.scheme-dark) .section-title, :root:not(.scheme-dark) .section-sub { text-shadow: 0 0 12px rgb(246 241 228 / 95%), 0 0 3px rgb(246 241 228 / 95%); }
+}
+:root.scheme-light .section-title, :root.scheme-light .section-sub { text-shadow: 0 0 12px rgb(246 241 228 / 95%), 0 0 3px rgb(246 241 228 / 95%); }
+
+.magnets { display: flex; flex-direction: column; gap: 16px; }
+.magnets .section-head { margin-top: 26px; margin-bottom: 0; }
+
+.magnet {
+  display: grid;
+  grid-template-columns: 38% minmax(0, 1fr);
+  text-align: left;
+  color: var(--text-primary);
+  text-decoration: none;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  overflow: hidden;
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 28%);
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.magnet:hover { transform: translateY(-3px); border-color: var(--card-border-hover); background-color: var(--card-bg-hover); }
+.magnet:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
+
+.magnet-img { position: relative; display: block; min-height: 100%; }
+.magnet-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.magnet-body { display: flex; flex-direction: column; gap: 6px; padding: 14px 14px 16px; min-width: 0; }
+.magnet-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.magnet-meta { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: var(--accent-sage); padding-top: 4px; }
+.magnet-badge {
+  flex: 0 0 auto;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--gold-bright);
+  color: var(--forest-deep);
+  padding: 4px 9px;
+  border-radius: 999px;
+  transform: rotate(3deg);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 25%);
+}
+.magnet-title { font-family: 'DM Serif Display', Georgia, serif; font-size: 1.35rem; line-height: 1.1; color: var(--text-primary); }
+.magnet-hook { font-weight: 700; font-size: 0.95rem; color: var(--accent-gold); line-height: 1.3; }
+.magnet-text { font-size: 0.86rem; line-height: 1.45; color: var(--text-secondary); }
+.magnet-cta { margin-top: 4px; font-weight: 700; font-size: 0.92rem; color: var(--accent-gold); }
+.magnet-cta i { font-size: 0.8em; margin-left: 4px; transition: transform 0.2s ease; }
+.magnet:hover .magnet-cta i { transform: translateX(4px); }
+
+@media (max-width: 380px) {
+  .magnet { grid-template-columns: 34% minmax(0, 1fr); }
+  .magnet-body { padding: 12px 12px 14px; }
+  .magnet-title { font-size: 1.2rem; }
+  .magnet-text { font-size: 0.82rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
