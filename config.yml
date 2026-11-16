@@ -48,98 +48,121 @@ tagline: >-
     tout ce qu'il te faut pour te reconnecter à ton corps (et à ton enfant intérieur, on y arrive). 🐒
 
 # -----------------------------------------------------------------------------
-# Lead magnets : grandes cartes « Offert » en haut de la page
+# Cartes, rangées par catégorie
+#   badge : « Offert » ou un prix (« 27 € »)
 #   image : fichier dans themes/sitting-monkey/images/magnets/
 # -----------------------------------------------------------------------------
-magnets_title: "Commence ici"
-magnets_sub: "4 outils pour revenir dans ton corps. Offerts."
-links_title: "Pour aller plus loin"
-magnets:
-  - title: "L'avis d'expulsion"
-    meta: "Outil interactif · 5 min"
-    hook: "Une règle squatte ta tête ?"
-    text: "« Je dois être productif·ve », « je ne dois pas déranger »… Tu la nommes, tu la remercies, tu la dis à voix haute de 5 façons, et tu la mets dehors. Tu repars avec ton avis d'expulsion, signé et daté."
-    cta: "Je la mets dehors"
-    url: "https://go.sittingmonkeyschool.com/expulsion"
-    image: "./images/magnets/expulsion.jpg"
-    alt: "Un singe à l'air rebelle"
+sections:
+  - title: "Commence ici"
+    sub: "Des outils pour revenir dans ton corps, à ton rythme. Offerts."
+    cards:
+      - title: "L'avis d'expulsion"
+        meta: "Outil interactif · 5 min"
+        badge: "Offert"
+        hook: "Une règle squatte ta tête ?"
+        text: "« Je dois être productif·ve », « je ne dois pas déranger »… Tu la nommes, tu la remercies, tu la dis à voix haute de 5 façons, et tu la mets dehors. Tu repars avec ton avis d'expulsion, signé de ton prénom."
+        cta: "Je la mets dehors"
+        url: "https://go.sittingmonkeyschool.com/expulsion"
+        image: "./images/magnets/expulsion.jpg"
+        alt: "Un singe assis, l'air pensif"
 
-  - title: "Les 4 pas de la CNV"
-    meta: "Jeu · 3 min"
-    hook: "Un conflit te trotte dans la tête ?"
-    text: "Tu démêles ce qui s'est passé de ce que tu te racontes, tu trouves les mots justes pour ce que tu ressens, et tu repars avec une phrase claire, prête à être dite."
-    cta: "Je joue"
-    url: "https://go.sittingmonkeyschool.com/4-pas"
-    image: "./images/magnets/4-pas.jpg"
-    alt: "Un singe assis, l'air contrarié"
+      - title: "Les 4 pas de la CNV"
+        meta: "Jeu · 3 min"
+        badge: "Offert"
+        hook: "Un conflit te trotte dans la tête ?"
+        text: "Tu démêles ce qui s'est passé de ce que tu te racontes, tu trouves les mots justes pour ce que tu ressens, et tu repars avec une phrase claire, prête à être dite."
+        cta: "Je joue"
+        url: "https://go.sittingmonkeyschool.com/4-pas"
+        image: "./images/magnets/4-pas.jpg"
+        alt: "Un singe assis, l'air contrarié"
 
-  - title: "Ton geste signal"
-    meta: "Audio guidé · 10 min"
-    hook: "Ton bouton calme, au bout des doigts."
-    text: "Tu relies un petit geste discret à un souvenir doux. Avant une réunion, un appel ou un moment qui te stresse, tu refais le geste, et ton corps retrouve la sensation."
-    cta: "J'écoute"
-    url: "https://go.sittingmonkeyschool.com/gestesignal"
-    image: "./images/magnets/geste-signal.jpg"
-    alt: "Un singe, les yeux fermés, apaisé"
+      - title: "Ton geste signal"
+        meta: "Audio guidé · 10 min"
+        badge: "Offert"
+        hook: "Ton bouton calme, au bout des doigts."
+        text: "Tu relies un petit geste discret à un souvenir doux. Avant une réunion, un appel ou un moment qui te stresse, tu refais le geste, et ton corps retrouve la sensation."
+        cta: "J'écoute"
+        url: "https://go.sittingmonkeyschool.com/gestesignal"
+        image: "./images/magnets/geste-signal.jpg"
+        alt: "Un singe, les yeux fermés, apaisé"
 
-  - title: "Mini Monkey Audit"
-    meta: "Quiz · 13 questions · 3 min"
-    hook: "Où en est ton enfant intérieur ?"
-    text: "13 questions pour découvrir ton profil Mini Monkey et voir à quel point tu es connecté·e à ton enfant intérieur. Résultat immédiat."
-    cta: "Je découvre mon profil"
-    url: "https://go.sittingmonkeyschool.com/minimonkey_audit"
-    image: "./images/magnets/audit.jpg"
-    alt: "Un jeune singe curieux"
+      - title: "Mini Monkey Audit"
+        meta: "Quiz · 13 questions · 3 min"
+        badge: "Offert"
+        hook: "Où en est ton enfant intérieur ?"
+        text: "13 questions pour découvrir ton profil Mini Monkey et voir à quel point tu es connecté·e à ton enfant intérieur. Résultat immédiat."
+        cta: "Je découvre mon profil"
+        url: "https://go.sittingmonkeyschool.com/minimonkey_audit"
+        image: "./images/magnets/audit.jpg"
+        alt: "Un jeune singe curieux"
 
-# -----------------------------------------------------------------------------
-# Links
-#   icon  — Font Awesome class (https://fontawesome.com/search?o=r&m=free)
-#   text  — displayed text (Liquid + HTML allowed)
-#   title — link title attribute
-#   url   — destination
-#   alt   — accessibility text
-#   target — `_blank` (new tab) or `_self`
-# -----------------------------------------------------------------------------
-links:
-  - link:
-      icon: "fa-solid fa-people-group"
-      text: "Cercles de parole gratuits!"
-      url: "https://www.skool.com/ecole-du-singe-assis-7222/about"
-      alt: "École du Singe Assis Skool community"
-      title: "Cercles de parole gratuits!"
-      target: "_blank"
+  - title: "Pratiquer ensemble"
+    sub: "La communauté et les ressources. Gratuites, pour toujours."
+    cards:
+      - title: "Les Cercles de Parole"
+        meta: "En groupe · en ligne sur Skool"
+        badge: "Gratuit"
+        hook: "Tu n'es pas seul·e à vivre ça."
+        text: "Des cercles en ligne pour déposer ce qui pèse, écouter et être écouté·e, avec les outils de la CNV. Caméra libre, sans jugement, et ce qui est dit dans le cercle reste dans le cercle."
+        cta: "Je rejoins la communauté"
+        url: "https://www.skool.com/ecole-du-singe-assis-7222/about"
+        image: "./images/magnets/cercles.jpg"
+        alt: "Des personnes en mouvement sur une scène de théâtre"
 
-  - link:
-      icon: "fa-solid fa-calendar-check"
-      text: "Appel découverte"
-      url: "https://cal.com/sittingmonkeyscheduling/decouverte"
-      alt: "Réserver un appel découverte"
-      title: "Appel découverte"
-      target: "_blank"
+      - title: "La liste des émotions et des besoins"
+        meta: "Fiche à télécharger"
+        badge: "Offert"
+        hook: "Des mots pour ce qui se passe en toi."
+        text: "La liste des émotions et des besoins de la CNV, à garder dans ton téléphone pour les moments où tout se mélange."
+        cta: "Je la télécharge"
+        url: "https://drive.proton.me/urls/1B1MA2Q76M#BZnuH631X5VD"
+        image: "./images/magnets/emotions.jpg"
+        alt: "Un singe, la main sur la bouche, l'air ému"
 
-  - link:
-      icon: "fa-solid fa-heart-circle-check"
-      text: "Liste des émotions et des besoins"
-      url: "https://drive.proton.me/urls/1B1MA2Q76M#BZnuH631X5VD"
-      alt: "Liste des émotions et des besoins"
-      title: "Liste des émotions et des besoins"
-      target: "_blank"
+  - title: "Être accompagné·e"
+    sub: "Quand tu veux qu'on avance ensemble, en ligne."
+    cards:
+      - title: "L'appel découverte"
+        meta: "Visio · 30 min"
+        badge: "Offert"
+        hook: "On fait connaissance ?"
+        text: "30 minutes pour me raconter où tu en es et ce qui te bloque. On regarde ensemble si et comment je peux t'accompagner."
+        cta: "Je réserve mon appel"
+        url: "https://cal.com/sittingmonkeyscheduling/decouverte"
+        image: "./images/magnets/appel.jpg"
+        alt: "Solal, souriant·e"
 
-  - link:
-      icon: "fa-solid fa-brain"
-      text: "Mini Monkey Reset - sors de ta tête - 27€"
-      url: "https://go.sittingmonkeyschool.com/mini_monkey_reset"
-      alt: "Mini Monkey Reset"
-      title: "Mini Monkey Reset - sors de ta tête - 27€"
-      target: "_blank"
+      - title: "Mini Monkey Reset"
+        meta: "Programme en ligne · accès immédiat"
+        badge: "27 €"
+        hook: "Tu ressens tout, ou plus rien ?"
+        text: "Un programme pour sortir de l'anxiété et de la perte de direction, et retrouver un quotidien vivant et relaxé. Satisfait·e ou remboursé·e pendant 7 jours."
+        cta: "Je me reconnecte"
+        url: "https://go.sittingmonkeyschool.com/mini_monkey_reset"
+        image: "./images/magnets/mmr.jpg"
+        alt: "Un singe concentré, les mains jointes"
 
-  - link:
-      icon: "fa-solid fa-language"
-      text: "For English speakers!"
-      url: "https://www.sittingmonkeyschool.com"
-      alt: "English version of the Sitting Monkey School site"
-      title: "For English speakers!"
-      target: "_blank"
+      - title: "La Session Clarté"
+        meta: "Visio · 45 min"
+        badge: "45 €"
+        hook: "Un nœud que tu n'arrives pas à défaire ?"
+        text: "45 minutes en ligne, toi et moi, pour comprendre plus profondément un conflit, intérieur ou extérieur, et repartir avec une piste claire."
+        cta: "Je réserve ma session"
+        url: "https://cal.com/sittingmonkeyscheduling/clarte"
+        image: "./images/magnets/clarte.jpg"
+        alt: "Un singe de profil, le regard au loin"
+
+  - title: "In English"
+    sub: "Sessions and resources for English speakers."
+    cards:
+      - title: "School of the Sitting Monkey"
+        meta: "Website · online sessions"
+        hook: "For English speakers!"
+        text: "Somatic coaching, sophrology, NVC and improv, online and in English. Discover the school and book a session."
+        cta: "Visit the website"
+        url: "https://www.sittingmonkeyschool.com"
+        image: "./images/magnets/english.jpg"
+        alt: "Solal, assis·e dans une pièce lumineuse, le regard levé"
 
 # -----------------------------------------------------------------------------
 # Social media buttons

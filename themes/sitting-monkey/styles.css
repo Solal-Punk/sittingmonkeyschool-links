@@ -504,6 +504,19 @@ a {
 :root.scheme-light .section-title, :root.scheme-light .section-sub { text-shadow: 0 0 12px rgb(246 241 228 / 95%), 0 0 3px rgb(246 241 228 / 95%); }
 
 .magnets { display: flex; flex-direction: column; gap: 16px; }
+.magnets { scroll-margin-top: 16px; }
+.magnet-price { background: var(--teal-bright); color: var(--forest-deep); transform: rotate(-2deg); }
+
+/* Raccourcis vers les catégories, sous le profil */
+.section-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 22px; }
+.section-nav a {
+  font-size: 0.82rem; font-weight: 700; color: var(--text-primary); text-decoration: none;
+  background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 999px; padding: 7px 13px;
+  backdrop-filter: var(--card-blur); -webkit-backdrop-filter: var(--card-blur);
+}
+.section-nav a:hover { border-color: var(--card-border-hover); }
+.section-nav a:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+html { scroll-behavior: smooth; }
 .magnets .section-head { margin-top: 26px; margin-bottom: 0; }
 
 .magnet {

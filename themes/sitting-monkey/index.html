@@ -72,31 +72,36 @@
       </div>
     </div>
 
-    {% if magnets %}
-    <section class="magnets" aria-labelledby="magnets-title">
+    {% if sections %}
+    <nav class="section-nav" aria-label="Catégories">
+      {% for section in sections %}<a href="#cat-{{ forloop.index }}">{{ section.title }}</a>{% endfor %}
+    </nav>
+    {% for section in sections %}
+    <section class="magnets" id="cat-{{ forloop.index }}" aria-labelledby="cat-{{ forloop.index }}-title">
       <div class="section-head">
-        <h2 class="section-title" id="magnets-title">{{ magnets_title }}</h2>
-        {% if magnets_sub %}<p class="section-sub">{{ magnets_sub }}</p>{% endif %}
+        <h2 class="section-title" id="cat-{{ forloop.index }}-title">{{ section.title }}</h2>
+        {% if section.sub %}<p class="section-sub">{{ section.sub }}</p>{% endif %}
       </div>
-      {% for magnet in magnets %}
-        <a href="{{ magnet.url }}" target="_blank" rel="noopener" class="magnet">
-          <span class="magnet-img"><img src="{{ magnet.image }}" alt="{{ magnet.alt }}" loading="lazy" width="480" height="600"></span>
+      {% for card in section.cards %}
+        <a href="{{ card.url }}" target="_blank" rel="noopener" class="magnet">
+          <span class="magnet-img"><img src="{{ card.image }}" alt="{{ card.alt }}" loading="lazy" width="480" height="600"></span>
           <span class="magnet-body">
             <span class="magnet-top">
-              <span class="magnet-meta">{{ magnet.meta }}</span>
-              <span class="magnet-badge">Offert</span>
+              <span class="magnet-meta">{{ card.meta }}</span>
+              {% if card.badge %}{% if card.badge contains '€' %}<span class="magnet-badge magnet-price">{{ card.badge }}</span>{% else %}<span class="magnet-badge">{{ card.badge }}</span>{% endif %}{% endif %}
             </span>
-            <span class="magnet-title">{{ magnet.title }}</span>
-            <span class="magnet-hook">{{ magnet.hook }}</span>
-            <span class="magnet-text">{{ magnet.text }}</span>
-            <span class="magnet-cta">{{ magnet.cta }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+            <span class="magnet-title">{{ card.title }}</span>
+            <span class="magnet-hook">{{ card.hook }}</span>
+            <span class="magnet-text">{{ card.text }}</span>
+            <span class="magnet-cta">{{ card.cta }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
           </span>
         </a>
       {% endfor %}
     </section>
+    {% endfor %}
     {% endif %}
 
-    {% if links_title %}<div class="section-head"><h2 class="section-title">{{ links_title }}</h2></div>{% endif %}
+    {% if links %}
     <div class="links" aria-label="{{ ui.primary_links | default: 'Primary links' }}">
       {% for item in links %}
         {% assign link = item.link %}
@@ -106,6 +111,7 @@
         </a>
       {% endfor %}
     </div>
+    {% endif %}
 
     <div class="button-container">
       <div class="button-group">
