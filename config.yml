@@ -119,6 +119,16 @@ sections:
         image: "./images/magnets/emotions.jpg"
         alt: "Un singe, la main sur la bouche, l'air ému"
 
+      - title: "Le yoga du singe"
+        meta: "Fiche à télécharger"
+        badge: "Offert"
+        hook: "Ton corps a besoin de bouger le matin ?"
+        text: "Ma routine du matin en 20 étapes, plus un renfo au poids du corps. Chaque exercice illustré, à suivre à ton rythme."
+        cta: "Je la télécharge"
+        url: "https://drive.proton.me/urls/HDB4MVPCVM#fmwJoT4tlKp7"
+        image: "./images/magnets/yoga.jpg"
+        alt: "Un singe debout sur un tronc qui s'étire, un bras derrière la tête"
+
   - title: "Être accompagné·e"
     sub: "Quand tu veux qu'on avance ensemble, en ligne."
     cards:
